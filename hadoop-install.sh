@@ -26,7 +26,8 @@ source ~/.bashrc
 
 echo "Installing JAVA...(even if you already have it)"
 sudo apt-get install default-jre
-sed '25c\'"export JAVA_HOME=/usr/lib/jvm/default-java/jre/" /usr/local/Cellar/hadoop/2.5.1/libexec/etc/hadoop/hadoop-env.sh
+cp /usr/local/Cellar/hadoop/2.5.1/libexec/etc/hadoop/hadoop-env.sh /usr/local/Cellar/hadoop/2.5.1/libexec/etc/hadoop/hadoop-env.sh.backup
+sed '25c\'"export JAVA_HOME=/usr/lib/jvm/default-java/jre/" /usr/local/Cellar/hadoop/2.5.1/libexec/etc/hadoop/hadoop-env.sh.backup >> /usr/local/Cellar/hadoop/2.5.1/libexec/etc/hadoop/hadoop-env.sh
 echo "."
 echo "."
 echo "."
