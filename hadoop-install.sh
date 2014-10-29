@@ -18,8 +18,9 @@ source ~/.bashrc
 
 echo "Installing Hadoop using Linux Brew"
 brew install hadoop
-sudo ln -s /home/talhajansari/.linuxbrew/Cellar/ /usr/local/Cellar
+sudo ln -s ~/.linuxbrew/Cellar/ /usr/local/Cellar
 
+export PATH="$HOME/.linuxbrew/Cellar/hadoop/2.5.1/libexec/bin:$HOME/.linuxbrew/Cellar/hadoop/2.5.1/libexec/sbin:$PATH"
 echo "export PATH=\"$HOME/.linuxbrew/Cellar/hadoop/2.5.1/libexec/bin:$HOME/.linuxbrew/Cellar/hadoop/2.5.1/libexec/sbin:$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 
